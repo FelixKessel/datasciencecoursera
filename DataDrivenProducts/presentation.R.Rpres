@@ -1,0 +1,67 @@
+Pitch BMI Calculator
+========================================================
+author: F. Kessel
+date: 21.04.2015
+
+The Body Mass Index
+========================================================
+
+- The Body Mass Index (BMI) is a measure which evaluates 
+  the weight of a person in relation to his or her size
+- The calculation is the following: weight (in kg)/(size (in m))^2
+- The Body Mass index is to be interpreted as an approximate
+  measure as it does not take into acount for the relation
+  between muscles and fat
+  
+  
+Interpreting the Body Mass Index
+========================================================
+
+<b>Females</b>
+
+
+below 19: underweight
+
+19-24: normal weight
+
+above 24: overweight
+
+***
+
+<b>Males</b>
+
+
+below 20: underweight
+
+20-25: normal weight
+
+above 25: overweight
+  
+
+  
+Examples for Calculation
+========================================================
+
+
+```{r, echo = FALSE}
+
+weight <- 80
+size <- 1.80
+print(paste0("Your weight: ", weight, " kilograms"))
+print(paste0("Your size: ", size, " meters"))
+print(paste0("Use formula to determine BMI:"))
+print(paste0("weight (in kg)/(size (in m))^2"))
+BMI <- round(weight/size^2, digits = 1)
+print(paste0("Your BMI is: ", BMI))
+
+```
+  
+Worth of the Shiny Application
+========================================================
+
+- Quick and simple specification of weight and size by use
+  of sliders
+- Fast calculation enables possibility to "play around" with
+  different size/weight allocations
+- Application provides instant evaluation of the BMI taking 
+  into account the gender
